@@ -85,6 +85,13 @@ f = open('worldometers_covid19_country.csv','w') # open new file, make sure path
 f.write("No\tCountry\tTotal Case\tNew Case\tTotal Deaths\tNew Deaths\tTotal Recovered\tActive Case\tSerious, Critical\tTot Cases/1M pop\tDeaths/1M pop\tTotal Tests\tTests/1M pop\tPopulation\tContinent" + "\n") # write headers
 ```
 
+
+
+
+    178
+
+
+
 ![Source Code HTML](images/code.png)
 
 
@@ -114,6 +121,13 @@ results = text.split("\n")                               # Create result arrays 
 
 results.pop()                                            # To remove the last item from the list  
 ```
+
+
+
+
+    ''
+
+
 
 
 ```python
