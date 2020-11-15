@@ -86,12 +86,6 @@ f.write("No\tCountry\tTotal Case\tNew Case\tTotal Deaths\tNew Deaths\tTotal Reco
 ```
 
 
-
-
-    178
-
-
-
 ![Source Code HTML](images/code.png)
 
 
@@ -121,13 +115,6 @@ results = text.split("\n")                               # Create result arrays 
 
 results.pop()                                            # To remove the last item from the list  
 ```
-
-
-
-
-    ''
-
-
 
 
 ```python
@@ -216,7 +203,3 @@ We used Beautiful Soup as the main tool. The major concept with Beautiful Soup i
 
  Once we grab elements, Python makes it easy to write the elements or relevant components of the elements into other files, such as a CSV, that can be stored in a database or opened in other software.
 
-
-```python
-
-```
