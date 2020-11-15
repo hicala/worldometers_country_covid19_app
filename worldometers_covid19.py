@@ -43,7 +43,7 @@
 # 
 # Python requires us to explicitly load the libraries that we want to use:
 
-# In[29]:
+# In[1]:
 
 
 # If you don't have Beautiful Soup, install with 'conda install beautifulsoup' in terminal
@@ -55,7 +55,7 @@ import re
 
 # Load a webpage into python so that we can parse it and manipulate it.
 
-# In[30]:
+# In[2]:
 
 
 # Load a webpage into python so that we can parse it and manipulate it.
@@ -64,7 +64,7 @@ URL = 'https://www.worldometers.info/coronavirus/'
 
 # Control of Connection. We just turned the website code into a Python object. 
 
-# In[31]:
+# In[3]:
 
 
 # Control of Connection
@@ -75,7 +75,7 @@ soup = bs4.BeautifulSoup(response.text, "html.parser")
 
 # Find all the tags with class main_table_countries_today
 
-# In[32]:
+# In[4]:
 
 
 # find all the tags with class total Country data
@@ -86,7 +86,7 @@ data = soup.findAll(attrs={'id':['main_table_countries_today']})
 # 
 # Later, I write headers
 
-# In[33]:
+# In[5]:
 
 
 f = open('worldometers_covid19_country.csv','w') # open new file, make sure path to your data file is correctf = open('worldometers_covid19_country.csv','w') # open new file, make sure path to your data file is correct
@@ -95,7 +95,7 @@ f.write("No\tCountry\tTotal Case\tNew Case\tTotal Deaths\tNew Deaths\tTotal Reco
 
 # ![Source Code HTML](images/code.png)
 
-# In[34]:
+# In[6]:
 
 
 # Clear HTML tag and assign to text textall
@@ -108,7 +108,7 @@ for element in data:                       # Iterate over the data array
 text = textall                             # Assign to text textall
 
 
-# In[35]:
+# In[7]:
 
 
 # Cleans irrelevant data from the text and assigns it to an array
@@ -125,7 +125,7 @@ results = text.split("\n")                               # Create result arrays 
 results.pop()                                            # To remove the last item from the list  
 
 
-# In[36]:
+# In[8]:
 
 
 results_end = []
@@ -144,7 +144,7 @@ for element in results:  # Iterate over the results array
 
 # Get the data No, Country, Total Case, New Case, Total Deaths, New Deaths, Total Recovered, Active Case, Serious, Critical, Tot Cases/1M pop, Deaths/1M pop, Total Tests, Tests/1M pop, Population and Continent
 
-# In[37]:
+# In[9]:
 
 
 # Iterate over the results array to get the data No, Country, Total Case, New Case, Total Deaths, New Deaths, Total Recovered, Active Case, Serious, Critical, Tot Cases/1M pop, Deaths/1M pop, Total Tests, Tests/1M pop, Population and Continent
@@ -199,7 +199,7 @@ for element in results_end:  # Iterate over the results array
         i = 0
 
 
-# In[38]:
+# In[10]:
 
 
 # Close file
@@ -213,3 +213,9 @@ f.close()
 # We used Beautiful Soup as the main tool. The major concept with Beautiful Soup is that it allows you to access elements of your page by following the CSS structures, such as grabbing all links, all headers, specific classes, or more. It is a powerful library.
 # 
 #  Once we grab elements, Python makes it easy to write the elements or relevant components of the elements into other files, such as a CSV, that can be stored in a database or opened in other software.
+
+# In[ ]:
+
+
+
+
